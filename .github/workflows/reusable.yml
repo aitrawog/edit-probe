@@ -1,0 +1,8 @@
+name: reusable
+on:
+  workflow_call:
+jobs:
+  r:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "REUSABLE RAN via ${{ github.event.action }}"

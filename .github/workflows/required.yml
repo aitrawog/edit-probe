@@ -1,0 +1,9 @@
+name: required-gate
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled]
+permissions:
+  contents: read
+jobs:
+  call:
+    uses: aitrawog/edit-probe/.github/workflows/reusable.yml@main
