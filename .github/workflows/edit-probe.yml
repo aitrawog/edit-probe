@@ -1,0 +1,9 @@
+name: edit-probe
+on:
+  pull_request:
+    types: [edited]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "EDITED event fired: ${{ github.event.action }}"
